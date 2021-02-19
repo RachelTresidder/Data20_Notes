@@ -25,7 +25,10 @@ def is_isogram(word):
             return True
 
 print(is_isogram(input("please enter a word ")))
+
 print(is_isogram(input("please enter a word ")))
+
+#this wont ignore punctuation/spaces
 
 # code from the internet:
 
