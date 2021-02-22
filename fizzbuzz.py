@@ -7,13 +7,29 @@
 #
 # Make sure to push your solution to your github account
 
+# for i in range(100):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print("FizzBuzz")
+#     elif i % 3 == 0:
+#         print("Fizz")
+#     elif i % 5 == 0:
+#         print("Buzz")
+#     else:
+#         print(i)
 
-for i in range(100):
-    if i % 15 == 0:
-        print("FizzBuzz")
-    elif i % 3 == 0:
-        print("Fizz")
-    elif i % 5 == 0:
-        print("Buzz")
+# turning it into a function
+
+def fizzbuzz(num: int):
+    if num % 3 == 0 and num % 5 == 0:
+        return "FizzBuzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    elif num % 5 == 0:
+        return "Buzz"
     else:
-        print(i)
+        return(num)
+
+print(fizzbuzz(29))
+
+# return stops the code, so if going through a list should use 'print' instead
+
