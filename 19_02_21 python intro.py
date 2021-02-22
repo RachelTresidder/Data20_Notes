@@ -226,3 +226,10 @@ else:
 # can play with thi by changing num's value
 
 # == means is equal to
+
+# diff between if and elif:
+#   if looks at the whole input
+#   elif looks at only the part of the input that was not ture for the if statement
+
+# use elif, if things are mutually exclusive
+# use if, if not mutually exclusive
