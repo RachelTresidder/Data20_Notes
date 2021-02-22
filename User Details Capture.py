@@ -70,3 +70,4 @@ def fav_films():
 print(fav_films())
 
 # pseudocode = logic without syntax
+#     easiest pseudocode = start with bullet points and then flesh it out with syntax
