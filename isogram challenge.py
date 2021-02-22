@@ -13,22 +13,40 @@
 #
 # Make sure you push your solution to your github account.
 
-def is_isogram(word):
-    word = word.lower()
-    total = 0
-    for i in word:
-        total = total + 1
-    if total == len(word):
-        if word.count(i) > 1:
-            return False
-        else:
-            return True
-
-print(is_isogram(input("please enter a word ")))
-
-print(is_isogram(input("please enter a word ")))
+# def is_isogram(word):
+#     word = word.lower()
+#     total = 0
+#     for i in word:
+#         total = total + 1
+#     if total == len(word):
+#         if word.count(i) > 1:
+#             return False
+#     return True
+#
+# print(is_isogram("lumberjack"))
+#
+# print(is_isogram("six-year-old"))
+#
+# print(is_isogram("Hello"))
+# this still isn't iterating for the return false clause
 
 # this wont ignore punctuation/spaces
+
+
+#more simple, working method
+
+def iso(x):
+    temp = x.lower()
+    for i in temp:
+        if i.isalpha() and temp.count(i) > 1:
+            return False
+    return True
+
+print(iso("lumberjack"))
+
+print(iso("six-year-old"))
+
+print(iso("Hello"))
 
 
 # code from the internet:
