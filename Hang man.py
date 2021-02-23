@@ -90,58 +90,49 @@ while lives != 0:
     attempt = attempt.lower()
     letter = str(attempt)
     if letter in word and letter not in guessed_letters:
-            print("Correct")
-            guessed_letters.append(letter)
-            for i in range(0, length_of_word):
-                if word[i] == letter:
-                    spaces_list[i] = letter
-            if ''.join(spaces_list) == word:
-                flag = True
+        print("Correct")
+        guessed_letters.append(letter)
+        for i in range(0, length_of_word):
+            if word[i] == letter:
+                spaces_list[i] = letter
+        if ''.join(spaces_list) == word:
+            flag = True
+            break
+        print(''.join(spaces_list))
+        print(f"you have {lives} lives left")
+        print(f"You have tried these letters so far :{guessed_letters}")
+        if input("Can you guess the word yet? Y/N").lower() == "y":
+            print(f"your previous guessed words are {guessed_words}")
+            guess = input("Write your guess").lower()
+            guessed_words.append(guess)
+            if guess == word:
+                print(f"You win! The word was {word}")
                 break
-            print(''.join(spaces_list))
-            print(f"you have {lives} lives left")
-            print(f"You have tried these letters so far :{guessed_letters}")
-            if input("Can you guess the word yet? Y/N").lower() == "y":
-                print(f"your previous guessed words are {guessed_words}")
-                guess = input("Write your guess").lower()
-                guessed_words.append(guess)
-                if guess == word:
-                    print(f"You win! The word was {word}")
-                    break
-                else:
-                    print("Incorrect, you loose another life")
-                    lives -= 1
-                    print(f"you have {lives} lives left")
+            else:
+                print("Incorrect, you loose another life")
+                lives -= 1
+                print(f"you have {lives} lives left")
     elif letter in guessed_letters:
         print(f"You have already tried {letter}")
     else:
         if letter not in word and len(letter) == 1 and attempt in 'abcdefghijklmnopqrstuvwxyz':
-                print("Incorrect")
-                guessed_letters.append(letter)
-                lives -= 1
-                print(f"you have {lives} lives left")
-                print(f"You have tried these letters so far :{guessed_letters}")
+            print("Incorrect")
+            guessed_letters.append(letter)
+            lives -= 1
+            print(f"you have {lives} lives left")
+            print(f"You have tried these letters so far :{guessed_letters}")
         else:
             print("You did not enter a letter")
 if lives == 0:
-        print(f"You have {lives} lives remaining, you lose! \n"
-              f"The word was {word}")
+    print(f"You have {lives} lives remaining, you lose! \n"
+          f"The word was {word}")
 if flag:
     print(f"You win! The word was {word}")
 
-# if spaces_list[i] != '_':
-#     flag = True
-#     break
 # lives count is rolling down
 # can return the old letters that have been guessed
 # tells you if you have already guessed a letter and doesnt mark off another life
 # can also filter out anything other than a relevant character (letter)
 # has an exit of the loop as soon as lives reach 0, saying you lose
 
-# still need to be able to create an object of all guessed letters
-
-
-    # elif word in old:
-    #     print(f"You win! The word was {word}")
-    #     break
-    # this doesnt work yet - cannot look for the word in a list of letters
+# all running :)
