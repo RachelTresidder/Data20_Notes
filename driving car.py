@@ -9,16 +9,17 @@
 # this skips the function
 
 def speed():
-    mph = input("How fast would you like to go? Choose a number from 1 to 5")
+    mph = input("How fast would you like to go? Choose a number from 1 to 50 mph")
     return mph
+# this is the up value
 
 # print(speed())
 
 
 def direction():
-    choice = input("Which direction would you like to go in? Choose either FORWARDS or BACKWARDS").lower()
+    choice = input("Which direction would you like to go in? Choose either UP or DOWN").lower()
     direction_counter = 0
-    if choice == "forwards":
+    if choice == "up":
         direction_counter += 1
     else:
         direction_counter -= 1
@@ -28,26 +29,36 @@ def direction():
 
 
 def turn():
-    way = input("Which way would you like to turn? Choose either LEFT or RIGHT").lower()
+    way = input("Which way would you like to turn? Choose either LEFT, RIGHT, or STRAIGHT").lower()
     turn_counter = 0
     if way == "left":
-        turn_counter = 10
+        turn_counter -= 1
+    elif way == "straight":
+        turn_counter = 0
     else:
-        turn_counter = -10
+        turn_counter += 1
     return turn_counter
+# across value in here
 
 # this is not working with positive and negative values
 
 
-movement = int(speed()) * int(direction())
-print(movement)
+def main():
+    destination = [30, 50]
+    print(destination)
+    coordinates = [0,0]
+    while coordinates != destination:
+        if coordinates == destination:
+            print("You have arrived")
+        else:
+            print("You haven't reached your destination, keep going")
+            print(f"these are your current coordinates: {coordinates}")
+            coordinates[0] = int(coordinates[0] + (int(turn()) * int(speed())))
+            coordinates[1] = int(coordinates[1] + (int(direction()) * int(speed())))
 
-movement_turning = movement * int(turn())
-print(movement_turning)
+print(main())
 
-# def total_movement():
-#     movement = speed() * direction()
-#     return movement
-# pass
+# not subtracting negatives
 
-# print(total_movement)
+
+
