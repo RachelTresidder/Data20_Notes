@@ -24,7 +24,7 @@ def random_destination():
 
 
 def distance():
-    meters = input("How fast would you like to go? Choose a number from 1 to 20 meters ")
+    meters = input("How far would you like to go? Choose from 1 to 20 meters")
     return meters
 # this is the up value
 
