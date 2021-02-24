@@ -187,29 +187,29 @@
 
 
 # Dictionaries
-#
-# # use {}, you have key value pairs inside and can have more than 1 pair using a  ','
-# new_dict = {"my_key": "values", "num": 3,
-#             "key_list": ["val1", "val2", "val3"]}
-#
-# print(new_dict)
-# # we can see everything inside the {}
-#
-# print(new_dict["num"])
-# # returns the value associated with "num" - accessed using the key name - = 3
-#
-# print(new_dict['key_list'][0])
-# # returns the index 0 value from the key_list paired set of values
-#
-# print(new_dict.keys())
-# # returns all the key names within the dictionary
-#
-# print(new_dict.values())
-# # returns all of the values
-#
-# new_dict["my_key"] = "something else"
-# print(new_dict.keys())
-# # changed the key value to something else
+
+# use {}, you have key value pairs inside and can have more than 1 pair using a  ','
+new_dict = {"my_key": "values", "num": 3,
+            "key_list": ["val1", "val2", "val3"]}
+
+print(new_dict)
+# we can see everything inside the {}
+
+print(new_dict["num"])
+# returns the value associated with "num" - accessed using the key name - = 3
+
+print(new_dict['key_list'][0])
+# returns the index 0 value from the key_list paired set of values
+
+print(new_dict.keys())
+# returns all the key names within the dictionary
+
+print(new_dict.values())
+# returns all of the values
+
+new_dict["my_key"] = "something else"
+print(new_dict.keys())
+# changed the key value to something else
 
 
 # control flow - loops
