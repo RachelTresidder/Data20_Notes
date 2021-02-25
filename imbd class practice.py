@@ -40,10 +40,9 @@ class ETL:
             writer = csv.writer(file)
             writer.writerows(self.header)
 
-
-    def main(old_file_name, new_file_name):
+    def main(self, new_file_name):
         Example = ETL()
-        Example.csvfile = old_file_name
+        Example.csvfile = self.csv
         Example.extract()
         Example.transform_movies_shows()
         Example.transform_secondary_genres()
@@ -52,6 +51,3 @@ class ETL:
 
 
 ETL.main('imdbtitles.csv', 'newimdb.csv')
-
-
-
