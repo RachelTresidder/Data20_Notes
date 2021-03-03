@@ -19,7 +19,7 @@
 
 # turning it into a function
 
-def fizzbuzz(num: int):
+def fizzbuzz_function(num: int):
     if num % 3 == 0 and num % 5 == 0:
         return "FizzBuzz"
     elif num % 3 == 0:
@@ -27,9 +27,8 @@ def fizzbuzz(num: int):
     elif num % 5 == 0:
         return "Buzz"
     else:
-        return(num)
+        return num
 
-print(fizzbuzz(29))
 
+print(fizzbuzz_function(29))
 # return stops the code, so if going through a list should use 'print' instead
-

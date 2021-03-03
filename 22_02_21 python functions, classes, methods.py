@@ -91,7 +91,7 @@ x = 0
 # using a def in a class it passes "self into the brackets
 #   self = a parameter that is a reference to the current instance of the class
 
-# use snake-case when defining class names:
+# use camel-case when defining class names:
 #   e.g. BestDog()
 
 # bark()

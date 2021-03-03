@@ -157,7 +157,7 @@
 #
 # print(len(shopping_list))
 # # counts the individual strings within the list
-# #here, returns 4
+# # here, returns 4
 #
 # print(len(shopping_list[1]))
 # # returned the length of avocados = 8
@@ -188,9 +188,18 @@
 
 # Dictionaries
 
+old_dict = {"jeff": "goldblum", "num": 1}
+
 # use {}, you have key value pairs inside and can have more than 1 pair using a  ','
 new_dict = {"my_key": "values", "num": 3,
             "key_list": ["val1", "val2", "val3"]}
+
+# add values into a dictionary using update
+# create a new dictionary and append it to the old one
+old_dict.update(new_dict)
+print(old_dict)
+
+new_dict.update([("number", 1), ("hi", 4)])
 
 print(new_dict)
 # we can see everything inside the {}
