@@ -1,0 +1,55 @@
+good to have unit testing to check if code will work for anything we wat it to work for, not just our example code
+
+unit testing = test singe pieces of code one by on
+
+test driven development = writing tests first, then writing the code
+
+unit testing is useful as you know a small area within which an error is occurring and also lets you write the code to be sure you pass the test
+also easier to see how to include different bits of testing in user stories when working within SCRUM
+
+when writing code:
+write the test, then write the code, then test, repeat writing code and testing until all code passes with clean code
+
+manual testing methods (already doing):
+    just running code and debugging
+    print statements to check outputs
+
+
+not everything in code needs a unit test
+
+
+using:
+    import pytest
+    import unittest
+    import pyodbc
+
+    pytest and unittest are 2 diff packages to allow us to run tests in python
+
+
+file names matter!!!
+    never call a file 'unittest' or 'pytest'
+    but the file must begin with 'test_' to allow the system to know it's a test file
+
+
+should not just be running the file, should run tests in the terminal
+     cd into the file folder
+     then python -m unittest in the terminal
+        if the test passes, returns 'OK' in the terminal
+
+     use python -m unittest -v to get more information about the tests (-v = verbose)
+        it returns the tests and which ones have passed or failed
+
+
+
+using pytest:
+
+    python -m pytest -v
+
+MUCH BETTER!!!
+    gives you more details about failures and passes
+    fails appear in red
+    passes appear in green, and say PASSED instead of OK
+
+
+but always need to install pytest to use it
+
