@@ -122,42 +122,43 @@ x = 0
 
 
 # creating class objects
-# class Dog:
-#     animal_kind = 'canine'
-#
-#     def bark(self):
-#         print(self.animal_kind)
-#         return 'woof'
-#
-# husky = Dog()
+class Dog:
+    animal_kind = 'canine'
+
+    def bark(self):
+        print(self.animal_kind)
+        return 'woof'
+
+
+husky = Dog()
 
 # we have created an object and instantiated a class
 
-# print(type(husky))
+print(type(husky))
 # returns that it is a class '__main__Dog'
 
-# print(husky.bark())
+print(husky.bark())
 # now returns 'woof' and 'canine'
 
-# print(husky.animal_kind)
+print(husky.animal_kind)
 # returns canine
 
-# Lacy = Dog()
+Lacy = Dog()
 
 # added another dog
 
 # changing the animal kind
-# husky.animal_kind = "Big Dog"
+husky.animal_kind = "Big Dog"
 
-# print(husky.animal_kind)
-# print(Lacy.animal_kind)
+print(husky.animal_kind)
+print(Lacy.animal_kind)
 # husky is now a 'Big Dog' but Lacy is still 'canine'
 
 # WE CAN HAVE MULTIPLE OBJECTS THAT CAN ADAPT AND CHANGE within a class
 
-# Dog.animal_kind = "Dolphin"
-# print(husky.animal_kind)
-# print(Lacy.animal_kind)
+Dog.animal_kind = "Dolphin"
+print(husky.animal_kind)
+print(Lacy.animal_kind)
 
 # only Lacy changes to a dolphin, husky remains as a 'Big Dog'
 #       husky has already been defined, but Lacy reverts to the default, which was changed
@@ -236,19 +237,19 @@ x = 0
 
 # calling and setting variables
 
-class MethodExamples:
-
-    def __init__(self):
-        self._this_can_be_accessed = "I can access easily"
-
-    def get_this_can_be(self):
-        return(self._this_can_be_accessed)  # this can be accessed by the method but not by using
-        # 'MethodExamples.' - it doesnt appear as an option
-
-    def set_this_can_be(self, value_to_be_set):
-        self._this_can_be_accessed = value_to_be_set
-
-x = MethodExamples
+# class MethodExamples:
+#
+#     def __init__(self):
+#         self._this_can_be_accessed = "I can access easily"
+#
+#     def get_this_can_be(self):
+#         return(self._this_can_be_accessed)  # this can be accessed by the method but not by using
+#         # 'MethodExamples.' - it doesnt appear as an option
+#
+#     def set_this_can_be(self, value_to_be_set):
+#         self._this_can_be_accessed = value_to_be_set
+#
+# x = MethodExamples
 # 'x.'  #  shows/accesses everything outside the class despite the _
 
 # need __ to make it invisible/un-accessible
@@ -273,37 +274,37 @@ x = MethodExamples
 # INHERITANCE
 
 # creating a class for the parent
-class Animal:
-    def __init__(self):
-        self.alive = True
-        self.breathe()
-
-    def breathe(self):
-        print("one breath in, one breath out")
+# class Animal:
+#     def __init__(self):
+#         self.alive = True
+#         self.breathe()
+#
+#     def breathe(self):
+#         print("one breath in, one breath out")
 
 
 # this is inheritance from the parent:
-class LandMammal(Animal):
+# class LandMammal(Animal):
+#
+#     def __init__(self, legs):
+#         super().__init__()
+#         self.limbs = legs
+#
+#     def run(self):
+#         print("I can run!")
 
-    def __init__(self, legs):
-        super().__init__()
-        self.limbs = legs
 
-    def run(self):
-        print("I can run!")
-
-
-Horse = Animal()
-Mammoth = LandMammal(4)
-
-# mammoth has everything a horse has,  as well as having 4 legs and can run
-
-print(Horse.breathe)
-
-Horse.alive = False
-# technically killed the horse!!!
-
-print(Mammoth.breathe())
+# Horse = Animal()
+# Mammoth = LandMammal(4)
+#
+# # mammoth has everything a horse has,  as well as having 4 legs and can run
+#
+# print(Horse.breathe)
+#
+# Horse.alive = False
+# # technically killed the horse!!!
+#
+# print(Mammoth.breathe())
 
 # that is basically inheritance
 
